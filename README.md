@@ -94,8 +94,19 @@
 24. site:domain.com ?continue={payload}
 25. site:domain.com ?return_path={payload}
   
-  
-  
+## Shodan Dorks
+
+1. "default password" org:Organization Name
+2. "230 login successful" port:"21" org:Organization Name
+3. vsftpd 2.3.4 port:21 org:Organization Name
+4. 230 'anonymous@' login ok org:Organization Name
+5. guest login ok org:Organization Name
+6. country:EU port:21 -530 +230 +Organization Name
+7. country:IN port:80 title:protected org:Organization Name
+8. net: IP_ADDR product:elastic
+9. net: IP_ADDR port:9200 user
+10. port:"9200" all:''elastic indices
+11. port:27017 -all:"partially" all:''fs.files
   
   
   
