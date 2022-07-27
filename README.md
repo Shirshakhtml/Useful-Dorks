@@ -36,7 +36,7 @@
   5.*"domain.com" filename:.htpasswd* : **Wordpress File to store Username and Password**<br>
   5.*"domain.com" extension:sql mysql dump* : **MYSQL Dump Information**<br>
   
-  ## Google Dorks
+  ## Google/Bing/Yandex Dorks
   
   ## PS
 >In case of different subdomains or according to your scope you can put * on that place i.e **.domain.com or subdomain.domain.** in place of "site" in the dorks given below.
@@ -66,6 +66,17 @@
   8.*"site:domain.com" intitle:"Dashboard [Jenkins]"* : **Open Jenkins Dashboard**<br>
   9.*"site:domain.com" intitle:"index of" "shell.php"* : **Check for any Uploaded Shell**<br>
   
+  ## DuckDuckGo Dorks
+  1. is domainname down : Checking Whether Websites Are Down
+  2. color codes : Hex color codes matched up with the corresponding colors
+  3. html chars : List of the HTML codes for various special characters
+  4. lowercase text-you-want-to-be-converted / uppercase text-you-want-to-be-converted : Switch Text Case
+  5. qr domain-name : Generate QR Codes
+  6. alternative to any-app-name : Find App Alternatives
+  7. @profileidname : Find Social media bio without leaving profile
+  8. expand short-link / shorten domain-name : Shorten and expand links
+  9. stopwatch : quick stopwatch
+  10. loan AMOUNT at INTEREST with PERCENT down for DURATION : Loan calculator
   ## Open Redirect Dorks
   
 1. site:domain.com /{payload}
