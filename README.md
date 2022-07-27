@@ -208,5 +208,19 @@
 6. net:175.45.176.0/22,210.52.109.0/24,77.94.35.0/24 : Information related to North Korea
 7. port:17 product:"Windows qotd" : Quote of the day protocol
 8. "X-Recruiting:" : Finding a Job
-  
+9. geo:"56.913055,118.250862" : Find devices by giving geographical coordinates
+10. server: "gws" hostname:"google" : Find devices matching the hostname.
+11. net:210.214.0.0/16 : Find devices based on an IP address or /x CIDR
+12. os:"windows 7" : Find devices based on operating system
+13. proftpd port:21 : Find devices based on open ports
+14. apache after:22/02/2009 before:14/3/2010 : Find devices before or after between a given time
+15. title:"citrix gateway" : Find Citrix Gateway
+16. html:"def_wirelesspassword" : Helps to find the cleartext wifi passwords in Shodan
+17. NETSurveillance uc-httpd : Surveillance Cams with username:admin and password
+18. "privileged command" GET : No auth required to access CLI terminal
+19. hacked-router-help-sos : Routers which got compromised
+20. NCR Port:"161" : May allow for ATM Access availability
+
+
+
 
