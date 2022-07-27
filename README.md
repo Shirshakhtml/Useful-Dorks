@@ -1,4 +1,4 @@
-<h2 align="center">Useful Dorks</h2>
+<h2 align="center">Useful Dorks and improving Search</h2>
   <p align="center">
     <a
       href="https://github.com/Shirshakhtml/Useful-Dorks/issues/new?assignees=&labels=bug">Report
