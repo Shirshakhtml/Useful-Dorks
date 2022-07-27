@@ -108,5 +108,105 @@
 10. port:"9200" all:''elastic indices
 11. port:27017 -all:"partially" all:''fs.files
   
+# Shodan Dorks for the following:
+  - Industrial Control System(ICS)
+  - Remote Desktop
+  - Network Infrastructure
+  - Network Attached Storage
+  - Webcams
+  - Printers
+  - Home Devices
+  - Random Stuff
+
+**ICS**
+1. "Server: Prismview Player" : ICS
+2. "in-tank inventory" port:10001 : Gas Station Pump Controller
+3. P372 "ANPR enabled" : Automatic License Plate Readers
+4. mikrotik streetlight : Traffic Light Controllers / Red Light Cameras
+5. "voter system serial" country:US : Voting Machines in the United States
+6. "Cisco IOS" "ADVIPSERVICESK9_LI-M" : Telcos Running Cisco Lawful Intercept Wiretaps
+7. "[2J[H Encartele Confidential" : Prison Pay Phones
+8. http.title:"Tesla PowerPack System" http.component:"d3" -ga3ca4f2 : Tesla PowerPack Charging Status
+9. "Server: gSOAP/2.8" "Content-Length: 583" : Electric Vehicle Chargers
+10. "Cobham SATCOM" OR ("Sailor" "VSAT") : Maritime Satellites
+11. title:"Slocum Fleet Mission Control" : Submarine Mission Control Dashboards 
+12. "Server: CarelDataServer" "200 Document follows" : CAREL PlantVisor Refrigeration Units
+13. http.title:"Nordex Control" "Windows 2000 5.0 x86" "Jetty/3.1 (JSP 1.1; Servlet 2.2; java 1.6.0_14)" : Nordex Wind Turbine Farms
+14. "[1m[35mWelcome on console" : C4 Max Commercial Vehicle GPS Trackers
+15. "DICOM Server Response" port:104 : DICOM Medical X-Ray Machines
+16. "Server: EIG Embedded Web Server" "200 Document follows" : GaugeTech Electricity Meters
+17. "Siemens, SIMATIC" port:161 : Siemens Industrial Automation
+18. "Server: Microsoft-WinCE" "Content-Length: 12581" : Siemens HVAC Controllers
+19. "HID VertX" port:4070 : Door / Lock Access Controllers
+20. "log off" "select the appropriate" : Railroad Management
+
+**Remote Desktop**
+1. "authentication disabled" "RFB 003.008" : Unprotected VNC 
+2. "\x03\x00\x00\x0b\x06\xd0\x00\x00\x124\x00" : Windows RDP
+3. title:"Weave Scope" http.favicon.hash:567176827 : Weave Scope Dashboards
+4. "MongoDB Server Information" port:27017 -authentication : MongoDB
+5. "Set-Cookie: mongo-express=" "200 OK" : Mongo Express Web GUI
+6. "X-Jenkins" "Set-Cookie: JSESSIONID" http.title:"Dashboard" : Jenkins CI
+7. "Docker Containers:" port:2375 : Docker APIs
+8. "Docker-Distribution-Api-Version: registry" "200 OK" -gitlab : Docker Private Registries 
+9. "dnsmasq-pi-hole" "Recursion: enabled" : Pi-hole Open DNS Servers
+10. "root@" port:23 -login -password -name -Session : Already Logged-In as root via Telnet
+11. "Android Debug Bridge" "Device" port:5555 : Android Root Bridges
+12. Lantronix password port:30718 -secured : Lantronix Serial-to-Ethernet Adapter Leaking Telnet Passwords
+13. "Citrix Applications:" port:1604 : Citrix Virtual Apps
+14. "smart install client active" : Cisco Smart Install
+15. PBX "gateway console" -password port:23 : PBX IP Phone Gateways
+16. http.title:"- Polycom" "Server: lighttpd" : Polycom Video Conferencing 
+17. "Polycom Command Shell" -failed port:23 : Telnet Configuration
+18. "Server: Bomgar" "200 OK" : Bomgar Help Desk Portal
+19. "Intel(R) Active Management Technology" port:623,664,16992,16993,16994,16995 : Intel Active Management CVE-2017-5689 
+20. HP-ILO-4 !"HP-ILO-4/2.53" !"HP-ILO-4/2.54" !"HP-ILO-4/2.55" !"HP-ILO-4/2.60" !"HP-ILO-4/2.61" !"HP-ILO-4/2.62" !"HP-iLO-4/2.70" port:1900 : HP iLO 4 CVE-2017-12542 
+
+**Outlook Web Access**
+1. "x-owa-version" "IE=EmulateIE7" "Server: Microsoft-IIS/7.0" : Exchange 2007
+2. "x-owa-version" "IE=EmulateIE7" http.favicon.hash:442749392 : Exchange 2010
+3. "X-AspNet-Version" http.title:"Outlook" -"x-owa-version" : Exchange 2013 / 2016
+4. "X-MS-Server-Fqdn" : Lync / Skype for Business
+
+**Network Attached Storage**
+1. "Authentication: disabled" port:445 : SMB (Samba) File Shares
+2. "Authentication: disabled" NETLOGON SYSVOL -unix port:445 : Specifically domain controllers
+3. "Authentication: disabled" "Shared this folder to access QuickBooks files OverNetwork" -unix port:445 : Concerning default network shares of QuickBooks files
+4. "220" "230 Login successful." port:21 : FTP Servers with Anonymous Login
+5. "Set-Cookie: iomega=" -"manage/login.html" -http.title:"Log In" : Iomega / LenovoEMC NAS Drives
+6. Redirecting sencha port:9000 : Buffalo TeraStation NAS Drives
+7. "Server: Logitech Media Server" "200 OK" : Logitech Media Servers
+8. "X-Plex-Protocol" "200 OK" port:32400 : Plex Media Servers
+9. "CherryPy/5.1.0" "/home" : Tautulli / PlexPy Dashboards
+
+**Webcams**
+1. "Server: yawcam" "Mime-Type: text/html" : Yawcams
+2. ("webcam 7" OR "webcamXP") http.component:"mootools" -401 : webcamXP/webcam7
+3. "Server: IP Webcam Server" "200 OK" : Android IP Webcam Server
+4. html:"DVR_H264 ActiveX" : Security DVRs
   
+**Printers**
+1. "Serial Number:" "Built:" "Server: HP HTTP" : HP Printers
+2. ssl:"Xerox Generic Root" : Xerox Copiers/Printers
+3. "SERVER: EPSON_Linux UPnP" "200 OK" : Epson Printers
+4. "Server: EPSON-HTTP" "200 OK" : Epson Printers
+5. "Server: KS_HTTP" "200 OK" : Canon Printers
+6. "Server: CANON HTTP Server" : Canon Printers
   
+**Home Devices**
+1. "Server: AV_Receiver" "HTTP/1.1 406" : Yamaha Stereos
+2. "\x08_airplay" port:5353 : Apple TVs, HomePods, etc.
+3. "Chromecast:" port:8008 : Chromecasts / Smart TVs
+4. "Model: PYNG-HUB" : Crestron Smart Home Controllers
+ 
+**Misc**
+1. title:"OctoPrint" -title:"Login" http.favicon.hash:1307375944 : OctoPrint 3D Printer Controllers
+2. "ETH - Total speed" : Etherium Miners
+3. http.title:"Index of /" http.html:".pem" : Apache Directory Listings
+4. http.html:"* The wp-config.php creation script uses this file" : Misconfigured Wordpress 
+5. "Minecraft Server" "protocol 340" port:25565 : Minecraft Servers
+6. net:175.45.176.0/22,210.52.109.0/24,77.94.35.0/24 : Information related to North Korea
+7. port:17 product:"Windows qotd" : Quote of the day protocol
+8. "X-Recruiting:" : Finding a Job
+  
+
