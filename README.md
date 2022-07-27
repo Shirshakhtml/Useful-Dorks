@@ -222,5 +222,12 @@
 20. NCR Port:"161" : May allow for ATM Access availability
 
 
-
-
+**Youtube**
+1. Use # before any organisation name or any name which you want to search like #name or #orgname.
+2. Try to use the filters given under Search field as "Filters" and narrow down your scope.
+3. Upload date is a very useful filter while doing investigations.
+4. You can change your search to look for Channel, Playlist, Movie, or Show content instead.
+5. Use of "" in search fields and use the keywords inside the quotes. You would get the keywords in title of Videos and Channel Names.
+6. If you want to search a query and add an additional query then you can search like "keyword + additional keyword".
+7. If you want to exclude items from search then use the "-" operator and the keyword. Example: tennis -london (so it will remove the keyword "london" from the search).
+8. Add a wildcard (*) if you want to know all content related to that keyword like *keyword.
