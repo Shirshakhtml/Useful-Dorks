@@ -12,7 +12,8 @@
   <img alt="Osint-tool" src="https://img.shields.io/github/languages/code-size/Shirshakhtml/Useful-Dorks">
   </p>
   <br>
-  ```   
+  
+```   
    +-----------------------------------------------------------------------------+
    |  [!] Legal disclaimer: Usage of these dorks for attacking targets without   |
    |  prior mutual consent is illegal.                                           |
